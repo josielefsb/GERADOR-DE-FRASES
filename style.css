@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --paper: #fff7f7;
+  --ink: #18251f;
+  --muted: #67736c;
+  --green: #1e392b;
+  --lime: #d2f36b;
+  --coral: #ff765f;
+  --line: #cbd3c8;
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(#eadbde 0.7px, transparent 0.7px);
+  background-size: 17px 17px;
+}
+
+button, select { font: inherit; }
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+
+.page-shell { width: min(100% - 72px, 1120px); margin: 0 auto; }
+.topbar { min-height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.brand-mark { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 50%; background: var(--coral); font: 800 22px 'DM Sans', sans-serif; }
+.brand-name { font-size: 12px; font-weight: 800; line-height: 1.05; }
+.top-note, .eyebrow, .generator-topline, .category-picker label, .phrase-category, .page-footer { font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0; }
+.top-note { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 10px; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #87ad38; box-shadow: 0 0 0 3px #87ad3824; }
+
+main { width: min(100%, 780px); margin: 0 auto; }
+.intro { padding: 66px 0 34px; animation: rise-in 550ms ease-out both; }
+.eyebrow { margin: 0 0 16px; color: #536b4a; font-size: 10px; font-weight: 500; }
+h1 { margin: 0; font: 700 clamp(42px, 7.2vw, 76px)/0.99 'Playfair Display', Georgia, serif; letter-spacing: 0; }
+h1 span { color: #687c55; font-style: italic; }
+.intro-copy { max-width: 430px; margin: 22px 0 0; color: #536058; font-size: 15px; line-height: 1.65; }
+
+.generator { border: 1px solid var(--ink); background: #fbfcf7; box-shadow: 7px 7px 0 var(--ink); animation: rise-in 650ms 100ms ease-out both; }
+.generator-topline { height: 43px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: #5e6a62; font-size: 9px; }
+.issue-number { color: var(--ink); }
+.phrase-stage { min-height: 272px; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 49px 76px 43px; overflow: hidden; background-color: var(--green); background-image: linear-gradient(135deg, #294937, var(--green) 65%); color: var(--lime); }
+.quote-mark { position: absolute; top: 11px; left: 26px; color: #ffffff2c; font: 700 88px/1 'Playfair Display', Georgia, serif; }
+.phrase-text { position: relative; z-index: 1; max-width: 595px; margin: 0; font: 600 clamp(24px, 4vw, 36px)/1.25 'Playfair Display', Georgia, serif; letter-spacing: 0; }
+.phrase-category { position: relative; z-index: 1; margin-top: 25px; color: #c1d0c5; font-size: 9px; }
+.spark { position: absolute; right: 31px; bottom: 23px; color: var(--coral); font-size: 48px; line-height: 1; transform: rotate(-12deg); }
+
+.controls { min-height: 81px; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.category-picker { display: grid; gap: 5px; }
+.category-picker label { color: var(--muted); font-size: 8px; }
+.category-picker select { min-width: 160px; padding: 3px 23px 3px 0; border: 0; color: var(--ink); background: transparent; font-size: 13px; font-weight: 700; cursor: pointer; }
+.action-buttons { display: flex; align-items: center; gap: 10px; }
+.copy-button, .generate-button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--ink); font-size: 12px; font-weight: 700; cursor: pointer; transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease; }
+.copy-button { padding: 0 13px; color: var(--ink); background: transparent; }
+.copy-button span:first-child { font-size: 16px; }
+.generate-button { min-width: 142px; padding: 0 14px; color: var(--paper); background: var(--ink); }
+.generate-button .arrow { color: var(--lime); font-size: 16px; }
+.copy-button:hover, .generate-button:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--coral); }
+.generate-button:hover { background: #2b4837; }
+.copy-button:active, .generate-button:active { transform: translate(0, 0); box-shadow: none; }
+
+.page-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 27px; color: #738077; font-size: 8px; }
+@keyframes rise-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 600px) {
+  .page-shell { width: calc(100% - 36px); }
+  .topbar { min-height: 76px; }
+  .top-note { max-width: 145px; justify-content: flex-end; text-align: right; font-size: 8px; }
+  .intro { padding: 48px 0 27px; }
+  .intro-copy { max-width: 340px; font-size: 14px; }
+  .generator { box-shadow: 4px 4px 0 var(--ink); }
+  .generator-topline { padding: 0 13px; font-size: 8px; }
+  .phrase-stage { min-height: 270px; padding: 54px 24px 42px; }
+  .quote-mark { left: 13px; }
+  .phrase-text { font-size: clamp(25px, 8vw, 34px); }
+  .spark { right: 17px; bottom: 18px; font-size: 36px; }
+  .controls { align-items: stretch; flex-direction: column; padding: 16px 13px; }
+  .category-picker select { width: 100%; }
+  .action-buttons { display: grid; grid-template-columns: auto 1fr; }
+  .generate-button { min-width: 0; }
+  .page-footer { align-items: flex-start; flex-direction: column; margin-top: 23px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
