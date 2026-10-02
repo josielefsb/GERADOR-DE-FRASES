@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f5ec" />
+    <meta name="description" content="Uma dose diária de motivação duvidosa, com humor ácido e zero papo de coach." />
+    <title>Motivação duvidosa — frases para seguir em frente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Motivação duvidosa, início">
+          <span class="brand-mark" aria-hidden="true">m.</span>
+          <span class="brand-name">motivação<br />duvidosa</span>
+        </a>
+        <span class="top-note"><span class="status-dot"></span> apoio emocional não certificado</span>
+      </header>
+
+      <main id="inicio">
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">SEU EMPURRÃOZINHO, SEM PROMESSAS</p>
+          <h1 id="page-title">Vai dar certo.<br /><span>O universo está sem suporte técnico.</span></h1>
+          <p class="intro-copy">Frases motivacionais para quem já tentou pensar positivo e agora só quer terminar o dia.</p>
+        </section>
+
+        <section class="generator" aria-label="Gerador de frases">
+          <div class="generator-topline">
+            <span>GERADOR DE CONFIANÇA QUESTIONÁVEL</span>
+            <span class="issue-number">Nº <span id="phrase-count">01</span></span>
+          </div>
+
+          <div class="phrase-stage" aria-live="polite" aria-atomic="true">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p id="phrase" class="phrase-text">A vida não vem com manual. Vem com boletos, que é quase a mesma coisa, só que menos útil.</p>
+            <span class="phrase-category" id="phrase-category">VIDA ADULTA</span>
+            <span class="spark" aria-hidden="true">✳</span>
+          </div>
+
+          <div class="controls">
+            <div class="category-picker">
+              <label for="category">ASSUNTO</label>
+              <select id="category" name="category">
+                <option value="todas">De tudo um pouco</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="amor">Amor</option>
+                <option value="vida">Vida adulta</option>
+                <option value="autoestima">Autoestima</option>
+              </select>
+            </div>
+            <div class="action-buttons">
+              <button class="copy-button" id="copy-button" type="button" title="Copiar frase">
+                <span aria-hidden="true">⧉</span><span id="copy-label">Copiar</span>
+              </button>
+              <button class="generate-button" id="generate-button" type="button">
+                <span>Me dá outra</span><span class="arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <span>FEITO COM POUCA FÉ E BOAS INTENÇÕES</span>
+          <span>Respira. Reclama. Continua.</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
